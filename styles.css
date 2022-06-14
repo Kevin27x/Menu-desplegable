@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #EAEBEF;
+    font-family: 'Poppins', sans-serif;
+}
+
+img {
+    width: 20px;
+}
+
+.nav {
+    width: 300px;
+    height: 100vh;
+}
+
+.nav__link {
+    color: #303440;
+    display: block;
+    padding: 15px 0;
+    text-decoration: none; /*Quita el subrayado al hipervinculo*/
+    
+}
+
+.nav__link--inside {
+    padding-left: 20px;
+    border-radius: 6px;
+    text-align: left;
+}
+
+.nav__link--inside:hover {
+    background-color: #F6F8FA;
+}
+
+.list {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 0 15px 15px 0;
+    background-color: #fff;
+}
+
+.list__item {
+    list-style: none;
+    text-align: center;
+    width: 100%;
+    overflow: hidden; /*Oculta lo sobrante del submenu*/
+    
+}
+
+.list__item--click {
+    cursor: pointer;
+}
+
+.list__button{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    width: 80%;
+    margin: 0 auto;
+    background-color: aqua;
+}
+.arrow .list__arrow{
+    transform: rotate(90deg);
+}
+
+.list__arrow {
+    margin-left: auto; /*Truco de flexbox para llevar el elemento a la izquierda*/
+    transition: transform .3s;
+}
+
+.list__show {
+    background-color: antiquewhite;
+    width: 80%;
+    margin: 0 auto;
+    list-style: none;
+    border-left: 2px solid rgba(0 0 0 / 20%);
+    transition: height .4s; /*Anima el submenu*/
+    height: 0;
+}
